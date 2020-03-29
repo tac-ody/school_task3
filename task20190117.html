@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="jp" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>出張旅費精算支援ツール</title>
+        <link rel="stylesheet" type="text/css" href="task20190117.css">
+    </head>
+    <body>
+        <form action="taskresult.php" method="POST">
+            <div id="header">
+                <h1>出張旅費精算支援ツール</h1>
+                <div class="header-busyo">部署名:
+                    <select name="busyo" class="box" required>
+                        <option value="">▼選択してください</option>
+                        <option value="営業部">営業部</option>
+                        <option value="営業部">総務部</option>
+                        <option value="営業部">開発部</option>
+                    </select>
+                </div>
+                <div class="header-name">名前:
+                    <input type="text" class="box" name="name" required>
+                </div>
+            </div>
+            <!-- 交通費 -->
+            <!-- 1行目 -->
+            <div id="contents1">
+                <h2>交通費</h2>
+                <div class="contents-header1">
+                    <p>交通機関</p>
+                    <p>単価</p>
+                    <p>利用区分</p>
+                    <p>合計</p>
+                </div>
+                <div class="contents-main1">
+                    <select name="koutuuhi[]" class="box1">
+                        <option value="">▼選択してください</option>
+                        <option value="地下鉄">地下鉄</option>
+                        <option value="JR在来線">JR在来線</option>
+                        <option value="JR新幹線">JR新幹線</option>
+                        <option value="阪急">阪急</option>
+                        <option value="京阪">京阪</option>
+                    </select>
+                </div>
+                <div class="contents-main1">
+                    <input type="text" class="first_price_box" name ="firstPrice[]">
+                </div>
+                <div class="contents-main1">
+                    <select name="pattern[]" class="first_quantity_box">
+                        <option value="">▼選択してください</option>
+                        <option value="往復">往復</option>
+                        <option value="片道">片道</option>
+                    </select>
+                </div>
+                <div class="contents-main1">
+                    <input type="text" class="first_total_box" name ="firstTotal[]" readonly>
+                </div>
+                <!-- 2行目 -->
+                <div class="contents-main2">
+                    <select name="koutuuhi[]" class="box1">
+                      <option value="">▼選択してください</option>
+                      <option value="地下鉄">地下鉄</option>
+                      <option value="JR在来線">JR在来線</option>
+                      <option value="JR新幹線">JR新幹線</option>
+                      <option value="阪急">阪急</option>
+                      <option value="京阪">京阪</option>
+                    </select>
+                </div>
+                <div class="contents-main2">
+                    <input type="text" class="first_price_box" name ="firstPrice[]">
+                </div>
+                <div class="contents-main2">
+                    <select name="pattern[]" class="first_quantity_box">
+                        <option value="">▼選択してください</option>
+                        <option value="往復">往復</option>
+                        <option value="片道">片道</option>
+                    </select>
+                </div>
+                <div class="contents-main2">
+                    <input type="text" class="first_total_box" name ="firstTotal[]" readonly>
+                </div>
+                <!-- 3行目 -->
+                <div class="contents-main1">
+                    <select name="koutuuhi[]" class="box1">
+                      <option value="">▼選択してください</option>
+                      <option value="地下鉄">地下鉄</option>
+                      <option value="JR在来線">JR在来線</option>
+                      <option value="JR新幹線">JR新幹線</option>
+                      <option value="阪急">阪急</option>
+                      <option value="京阪">京阪</option>
+                    </select>
+                </div>
+                <div class="contents-main1">
+                    <input type="text" class="first_price_box" name ="firstPrice[]">
+                </div>
+                <div class="contents-main1">
+                    <select name="pattern[]" class="first_quantity_box">
+                        <option value="">▼選択してください</option>
+                        <option value="往復">往復</option>
+                        <option value="片道">片道</option>
+                    </select>
+                </div>
+                <div class="contents-main1">
+                    <input type="text" class="first_total_box" name ="firstTotal[]" readonly>
+                </div>
+                <!-- 4行目 -->
+                <div class="contents-main2">
+                    <select name="koutuuhi[]" class="box1">
+                      <option value="">▼選択してください</option>
+                      <option value="地下鉄">地下鉄</option>
+                      <option value="JR在来線">JR在来線</option>
+                      <option value="JR新幹線">JR新幹線</option>
+                      <option value="阪急">阪急</option>
+                      <option value="京阪">京阪</option>
+                    </select>
+                </div>
+                <div class="contents-main2">
+                    <input type="text" class="first_price_box" name ="firstPrice[]">
+                </div>
+                <div class="contents-main2">
+                    <select name="pattern[]" class="first_quantity_box">
+                        <option value="">▼選択してください</option>
+                        <option value="往復">往復</option>
+                        <option value="片道">片道</option>
+                    </select>
+                </div>
+                <div class="contents-main2">
+                    <input type="text" class="first_total_box" name ="firstTotal[]" readonly>
+                </div>
+                <!-- 5行目 -->
+                <div class="contents-main1">
+                    <select name="koutuuhi[]" class="box1">
+                      <option value="">▼選択してください</option>
+                      <option value="地下鉄">地下鉄</option>
+                      <option value="JR在来線">JR在来線</option>
+                      <option value="JR新幹線">JR新幹線</option>
+                      <option value="阪急">阪急</option>
+                      <option value="京阪">京阪</option>
+                    </select>
+                </div>
+                <div class="contents-main1">
+                    <input type="text" class="first_price_box" name ="firstPrice[]">
+                </div>
+                <div class="contents-main1">
+                    <select name="pattern[]" class="first_quantity_box">
+                        <option value="">▼選択してください</option>
+                        <option value="往復">往復</option>
+                        <option value="片道">片道</option>
+                    </select>
+                </div>
+                <div class="contents-main1">
+                    <input type="text" class="first_total_box" name ="firstTotal[]" readonly>
+                </div>
+                <div id="sum1">
+                    <div class="sum">合計　
+                        <input type="text" id="sum-box1" value="0" readonly>
+                    </div>
+                </div>
+            </div>
+            <!-- 宿泊費 -->
+            <!-- 1行目 -->
+            <br>
+            <div id="contents1">
+                <h2>宿泊費</h2>
+                <div class="contents-header1">
+                    <p>宿泊等</p>
+                    <p>単価</p>
+                    <p>泊数（数量）</p>
+                    <p>合計</p>
+                </div>
+                <div class="contents-main1">
+                    <select name="stay_eatdrink[]" class="box1">
+                        <option value="">▼選択してください</option>
+                        <option value="宿泊">宿泊</option>
+                        <option value="飲食">飲食</option>
+                    </select>
+                </div>
+                <div class="contents-main1">
+                    <input type="text" class="second_price_box" name ="secondPrice[]">
+                </div>
+                <div class="contents-main1">
+                    <select name="quantity[]" class="second_quantity_box">
+                        <option value="">▼選択してください</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                <div class="contents-main1">
+                    <input type="text" class="second_total_box" name ="secondTotal[]" readonly>
+                </div>
+                <!-- 2行目 -->
+                <div class="contents-main2">
+                    <select name="stay_eatdrink[]" class="box1">
+                      <option value="">▼選択してください</option>
+                      <option value="宿泊">宿泊</option>
+                      <option value="飲食">飲食</option>
+                    </select>
+                </div>
+                <div class="contents-main2">
+                    <input type="text" class="second_price_box" name ="secondPrice[]">
+                </div>
+                <div class="contents-main2">
+                    <select name="quantity[]" class="second_quantity_box">
+                        <option value="">▼選択してください</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                <div class="contents-main2">
+                    <input type="text" class="second_total_box" name ="secondTotal[]" readonly>
+                </div>
+                <!-- 3行目 -->
+                <div class="contents-main1">
+                    <select name="stay_eatdrink[]" class="box1">
+                      <option value="">▼選択してください</option>
+                      <option value="宿泊">宿泊</option>
+                      <option value="飲食">飲食</option>
+                    </select>
+                </div>
+                <div class="contents-main1">
+                    <input type="text" class="second_price_box" name ="secondPrice[]">
+                </div>
+                <div class="contents-main1">
+                    <select name="quantity[]" class="second_quantity_box">
+                        <option value="">▼選択してください</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                <div class="contents-main1">
+                    <input type="text" class="second_total_box" name ="secondTotal[]" readonly>
+                </div>
+                <!-- 4行目 -->
+                <div class="contents-main2">
+                    <select name="stay_eatdrink[]" class="box1">
+                      <option value="">▼選択してください</option>
+                      <option value="宿泊">宿泊</option>
+                      <option value="飲食">飲食</option>
+                    </select>
+                </div>
+                <div class="contents-main2">
+                    <input type="text" class="second_price_box" name ="secondPrice[]">
+                </div>
+                <div class="contents-main2">
+                    <select name="quantity[]" class="second_quantity_box">
+                        <option value="">▼選択してください</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                <div class="contents-main2">
+                    <input type="text" class="second_total_box" name ="secondTotal[]" readonly>
+                </div>
+                <!-- 5行目 -->
+                <div class="contents-main1">
+                    <select name="stay_eatdrink[]" class="box1">
+                      <option value="">▼選択してください</option>
+                      <option value="宿泊">宿泊</option>
+                      <option value="飲食">飲食</option>
+                    </select>
+                </div>
+                <div class="contents-main1">
+                    <input type="text" class="second_price_box" name="secondPrice[]">
+                </div>
+                <div class="contents-main1">
+                    <select name="quantity[]" class="second_quantity_box">
+                        <option value="">▼選択してください</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                <div class="contents-main1">
+                    <input type="text" class="second_total_box" name ="secondTotal[]" readonly>
+                </div>
+                <div id="sum2">
+                    <div class="sum">合計　
+                        <input type="text" id="sum-box2" value="0" readonly>
+                    </div>
+                </div>
+            </div>
+            <!-- その他 -->
+            <!-- 1行目 -->
+            <br>
+            <div id="contents1">
+                <h2>その他</h2>
+                <div class="contents-header1">
+                    <p>用途、商品名等</p>
+                    <p>単価</p>
+                    <p>数量</p>
+                    <p>合計</p>
+                </div>
+                <div class="contents-main1">
+                    <input type="text" class="box1" name="productName[]">
+                </div>
+                <div class="contents-main1">
+                    <input type="text" class="third_price_box" name="thirdPrice[]">
+                </div>
+                <div class="contents-main1">
+                    <select name="quantity_other[]" class="third_quantity_box">
+                        <option value="">▼選択してください</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                <div class="contents-main1">
+                    <input type="text" class="third_total_box" name ="thirdTotal[]" readonly>
+                </div>
+                <!-- 2行目 -->
+                <div class="contents-main2">
+                    <input type="text" class="box1" name="productName[]">
+                </div>
+                <div class="contents-main2">
+                    <input type="text" class="third_price_box" name="thirdPrice[]">
+                </div>
+                <div class="contents-main2">
+                    <select name="quantity_other[]" class="third_quantity_box">
+                        <option value="">▼選択してください</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                <div class="contents-main2">
+                    <input type="text" class="third_total_box" name ="thirdTotal[]" readonly>
+                </div>
+                <!-- 3行目 -->
+                <div class="contents-main1">
+                    <input type="text" class="box1" name="productName[]">
+                </div>
+                <div class="contents-main1">
+                    <input type="text" class="third_price_box" name="thirdPrice[]">
+                </div>
+                <div class="contents-main1">
+                    <select name="quantity_other[]" class="third_quantity_box">
+                        <option value="">▼選択してください</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                <div class="contents-main1">
+                    <input type="text" class="third_total_box" name ="thirdTotal[]" readonly>
+                </div>
+                <!-- 4行目 -->
+                <div class="contents-main2">
+                    <input type="text" class="box1" name="productName[]">
+                </div>
+                <div class="contents-main2">
+                    <input type="text" class="third_price_box" name="thirdPrice[]">
+                </div>
+                <div class="contents-main2">
+                    <select name="quantity_other[]" class="third_quantity_box">
+                        <option value="">▼選択してください</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                <div class="contents-main2">
+                    <input type="text" class="third_total_box" name ="thirdTotal[]" readonly>
+                </div>
+                <!-- 5行目 -->
+                <div class="contents-main1">
+                    <input type="text" class="box1" name="productName[]">
+                </div>
+                <div class="contents-main1">
+                    <input type="text" class="third_price_box" name="thirdPrice[]">
+                </div>
+                <div class="contents-main1">
+                    <select name="quantity_other[]" class="third_quantity_box">
+                        <option value="">▼選択してください</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                <div class="contents-main1">
+                    <input type="text" class="third_total_box" name ="thirdTotal[]" readonly>
+                </div>
+                <div id="sum3">
+                    <div class="sum">合計　
+                        <input type="text" id="sum-box3" value="0" readonly>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <p>総合計</p>
+                <input type="text" id="grandTotal" readonly>
+                <button type="submit" id="submit-box">確認</button>
+            </footer>
+        </form>
+    </body>
+</html>
